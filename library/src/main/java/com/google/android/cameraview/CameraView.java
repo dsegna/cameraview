@@ -29,6 +29,7 @@ import android.support.v4.os.ParcelableCompat;
 import android.support.v4.os.ParcelableCompatCreatorCallbacks;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
+import android.view.Surface;
 import android.widget.FrameLayout;
 
 import java.lang.annotation.Retention;
@@ -408,6 +409,14 @@ public class CameraView extends FrameLayout {
      */
     public void takePicture() {
         mImpl.takePicture();
+    }
+
+    /**
+     * Get the Surface object that the CameraView is using to display the camera preview
+     * @return The Surface object being used by the CameraView
+     */
+    public Surface getSurface() {
+        return mImpl.getSurface();
     }
 
     private class CallbackBridge implements CameraViewImpl.Callback {

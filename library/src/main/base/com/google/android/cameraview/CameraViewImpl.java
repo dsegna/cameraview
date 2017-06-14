@@ -16,6 +16,7 @@
 
 package com.google.android.cameraview;
 
+import android.view.Surface;
 import android.view.View;
 
 import java.util.Set;
@@ -68,6 +69,8 @@ abstract class CameraViewImpl {
     abstract void takePicture();
 
     abstract void setDisplayOrientation(int displayOrientation);
+
+    abstract Surface getSurface();
 
     interface Callback {
 

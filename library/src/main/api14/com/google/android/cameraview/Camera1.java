@@ -21,6 +21,7 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.os.Build;
 import android.support.v4.util.SparseArrayCompat;
+import android.view.Surface;
 import android.view.SurfaceHolder;
 
 import java.io.IOException;
@@ -271,6 +272,11 @@ class Camera1 extends CameraViewImpl {
                 mCamera.startPreview();
             }
         }
+    }
+
+    @Override
+    Surface getSurface() {
+        return mPreview.getSurface();
     }
 
     /**
